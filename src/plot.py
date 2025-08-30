@@ -1,8 +1,3 @@
-# plot_wc_simple_cli.py
-# Two plots from vb_wc_only.csv:
-# 1) V_emp(M; n=emp_n) vs M  + worst-case V_wc(M; n) for --bounds_n
-# 2) V_emp(n; M=emp_M) vs n  + worst-case V_wc(n; M) for --bounds_M
-
 import os
 import argparse
 import numpy as np
@@ -32,8 +27,8 @@ def map_to_available_list(requested, pool):
 
 def main():
     ap = argparse.ArgumentParser(description="Simple plots with user-set bound lists.")
-    ap.add_argument("--csv", default="vb_wc_only.csv", help="Path to vb_wc_only.csv")
-    ap.add_argument("--outdir", default="figs_simple", help="Output folder")
+    ap.add_argument("--csv", default="results/vb.csv", help="Path to vb_wc_only.csv")
+    ap.add_argument("--outdir", default="results/figs", help="Output folder")
     ap.add_argument("--emp_n", type=int, default=200, help="n for empirical curve in vs-M plot")
     ap.add_argument("--emp_M", type=int, default=200, help="M for empirical curve in vs-n plot")
     ap.add_argument("--bounds_n", default="10,50,200", help="n values for worst-case curves in vs-M plot")
@@ -50,17 +45,14 @@ def main():
     all_Ms = sorted(df["M"].unique())
     all_ns = sorted(df["n"].unique())
 
-    # empirical curve settings (snap to nearest available if needed)
     n_emp = nearest_available(all_ns, args.emp_n)
     M_emp = nearest_available(all_Ms, args.emp_M)
 
-    # user-requested bound lists -> snap each to nearest available grid value
     req_n_bounds = parse_list_arg(args.bounds_n)
     req_M_bounds = parse_list_arg(args.bounds_M)
     n_bounds = map_to_available_list(req_n_bounds, all_ns)
     M_bounds = map_to_available_list(req_M_bounds, all_Ms)
 
-    # also include the empirical’s fixed value for context (if not already present)
     if n_emp not in n_bounds: n_bounds.append(n_emp)
     if M_emp not in M_bounds: M_bounds.append(M_emp)
 

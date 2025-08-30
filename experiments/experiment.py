@@ -1,12 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-"""
-Experiment Runner for Anytime Quality Evaluation on Boolean Network Search Algorithms.
-Follows reproducible experiment protocol with configurable CLI, progress tracking,
-and structured result logging.
-"""
-
 import os
 import sys
 import time
@@ -21,13 +12,13 @@ from collections import defaultdict
 from tqdm import tqdm
 import math
 # Local modules
-import bn_async_sim as bnas
-import ensemble_utils as eu
-from nmcs_module import nmcs
-from lnmcs_module import lnmcs
-from bilnmcs_module import bilnmcs
-from nrpa_module import nrpa
-from gnrpa_module import gnrpa
+import src.bn_async_sim as bnas
+import src.ensemble_utils as eu
+from src.nmcs_module import nmcs
+from src.lnmcs_module import lnmcs
+from src.bilnmcs_module import bilnmcs
+from src.nrpa_module import nrpa
+from src.gnrpa_module import gnrpa
 
 
 # =====================
@@ -186,8 +177,8 @@ def run_experiments(zip_path, extract_dir, depths, ensemble_sizes, timeouts, n_t
 
 def parse_args():
     p = argparse.ArgumentParser(description="Anytime quality experiment runner")
-    p.add_argument("--zip_path", type=str, default="../data/bundle-exactpkn32-nocyclic-globalfps.zip")
-    p.add_argument("--extract_dir", type=str, default="../data/WT_ensemble")
+    p.add_argument("--zip_path", type=str, default="data/bundle-exactpkn32-nocyclic-globalfps.zip")
+    p.add_argument("--extract_dir", type=str, default="data/WT_ensemble")
     p.add_argument("--depths", type=int, nargs="+", default=list(range(3, 11)))
     p.add_argument("--ensemble_sizes", type=int, nargs="+", default=[200, 500, 700, 1000])
     p.add_argument("--timeouts", type=int, nargs="+", default=[5])
