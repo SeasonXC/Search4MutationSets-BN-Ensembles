@@ -1,0 +1,201 @@
+{
+  "summary": [
+    {
+      "algorithm": "NMCS",
+      "ensemble_size": 50,
+      "depth": 2,
+      "timeout": 3,
+      "mean_score": 0.40240000000000004,
+      "std_score": 0.0,
+      "mean_time": 3.1063480377197266,
+      "best_score": 0.40240000000000004,
+      "best_set": [
+        [
+          "AKT1",
+          true
+        ],
+        [
+          "CTNNB1",
+          true
+        ]
+      ]
+    },
+    {
+      "algorithm": "LNMCS",
+      "ensemble_size": 50,
+      "depth": 2,
+      "timeout": 3,
+      "mean_score": 0.5536000000000001,
+      "std_score": 0.0,
+      "mean_time": 3.171121120452881,
+      "best_score": 0.5536000000000001,
+      "best_set": [
+        [
+          "CDH2",
+          true
+        ],
+        [
+          "miR200",
+          false
+        ]
+      ]
+    },
+    {
+      "algorithm": "BILNMCS",
+      "ensemble_size": 50,
+      "depth": 2,
+      "timeout": 3,
+      "mean_score": 0.5536000000000001,
+      "std_score": 0.0,
+      "mean_time": 3.1251442432403564,
+      "best_score": 0.5536000000000001,
+      "best_set": [
+        [
+          "CDH2",
+          true
+        ],
+        [
+          "miR200",
+          false
+        ]
+      ]
+    },
+    {
+      "algorithm": "NRPA",
+      "ensemble_size": 50,
+      "depth": 2,
+      "timeout": 3,
+      "mean_score": 0.41119999999999995,
+      "std_score": 0.0,
+      "mean_time": 3.091186285018921,
+      "best_score": 0.41119999999999995,
+      "best_set": [
+        [
+          "SMAD",
+          true
+        ],
+        [
+          "miR34",
+          false
+        ]
+      ]
+    },
+    {
+      "algorithm": "GNRPA",
+      "ensemble_size": 50,
+      "depth": 2,
+      "timeout": 3,
+      "mean_score": 0.36760000000000004,
+      "std_score": 0.0,
+      "mean_time": 3.075975179672241,
+      "best_score": 0.36760000000000004,
+      "best_set": [
+        [
+          "ECMicroenv",
+          true
+        ],
+        [
+          "AKT2",
+          true
+        ]
+      ]
+    }
+  ],
+  "trials": [
+    {
+      "algorithm": "NMCS",
+      "ensemble_size": 50,
+      "depth": 2,
+      "timeout": 3,
+      "trial": 0,
+      "score": 0.40240000000000004,
+      "time": 3.1063480377197266,
+      "best_set_so_far": [
+        [
+          "AKT1",
+          true
+        ],
+        [
+          "CTNNB1",
+          true
+        ]
+      ]
+    },
+    {
+      "algorithm": "LNMCS",
+      "ensemble_size": 50,
+      "depth": 2,
+      "timeout": 3,
+      "trial": 0,
+      "score": 0.5536000000000001,
+      "time": 3.171121120452881,
+      "best_set_so_far": [
+        [
+          "CDH2",
+          true
+        ],
+        [
+          "miR200",
+          false
+        ]
+      ]
+    },
+    {
+      "algorithm": "BILNMCS",
+      "ensemble_size": 50,
+      "depth": 2,
+      "timeout": 3,
+      "trial": 0,
+      "score": 0.5536000000000001,
+      "time": 3.1251442432403564,
+      "best_set_so_far": [
+        [
+          "CDH2",
+          true
+        ],
+        [
+          "miR200",
+          false
+        ]
+      ]
+    },
+    {
+      "algorithm": "NRPA",
+      "ensemble_size": 50,
+      "depth": 2,
+      "timeout": 3,
+      "trial": 0,
+      "score": 0.41119999999999995,
+      "time": 3.091186285018921,
+      "best_set_so_far": [
+        [
+          "SMAD",
+          true
+        ],
+        [
+          "miR34",
+          false
+        ]
+      ]
+    },
+    {
+      "algorithm": "GNRPA",
+      "ensemble_size": 50,
+      "depth": 2,
+      "timeout": 3,
+      "trial": 0,
+      "score": 0.36760000000000004,
+      "time": 3.075975179672241,
+      "best_set_so_far": [
+        [
+          "ECMicroenv",
+          true
+        ],
+        [
+          "AKT2",
+          true
+        ]
+      ]
+    }
+  ]
+}
