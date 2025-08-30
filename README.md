@@ -49,11 +49,15 @@ Search4MutationSets-BN-Ensembles/
 
 ## Methods Included
 > **NMCS** — Nested Monte Carlo Search  
-> **LNMCS** — Lazy NMCS 
-> **BILNMCS** — Bi-Lazy NMCS  
+> **LNMCS** — Lazy NMCS
+
 > **NRPA** — Policy adaptation nested rollout  
 > **GNRPA** — NRPA with guidance/bias terms
 
+> **BILNMCS** — Bi-Lazy NMCS  
+
+
 ## 📍 
 This work was conducted at LAMSADE, Université Paris-Dauphine. A detailed manuscript and results is available upon request.
+
 
