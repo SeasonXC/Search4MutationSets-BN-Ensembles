@@ -1,8 +1,6 @@
 # Mutation Set Search in Boolean Network Ensembles
 
-This repo benchmarks advanced search algorithms (NMCS, LNMCS, NRPA, GNRPA, Bi-Lazy NMCS) for identifying mutation sets that shift phenotype probabilities in ensembles of asynchronous Boolean networks.
-
-Ensemble simulation accounts for rule uncertainty in biological models (e.g., tumor invasion), and each algorithm efficiently explores the mutation space under simulation noise.
+This repo benchmarks advanced search algorithms (NMCS, LNMCS, NRPA, GNRPA, Bi-Lazy NMCS) for identifying mutation sets that achieve the good phenotype probabilities(>0.8) in ensembles of asynchronous Boolean networks.
 
 ---
 
@@ -39,8 +37,8 @@ Search4MutationSets-BN-Ensembles/
 ├── src/            # Core simulation + algorithms
 ├── experiments/    # CLI runner + argument parsing
 ├── data/           # Boolean networks and bundles
-├── results/        # Logs and plots
-├── notebooks/      # Optional analysis notebooks
+├── results/        # main results
+├── notebooks/      # coming soon
 └── README.md
 ```
 
@@ -59,5 +57,6 @@ Search4MutationSets-BN-Ensembles/
 
 ## 📍 
 This work was conducted at LAMSADE, Université Paris-Dauphine. A detailed manuscript and results is available upon request.
+
 
 
