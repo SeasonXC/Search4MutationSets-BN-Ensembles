@@ -78,7 +78,7 @@ def _nrpa(level, policy, depth, ec, all_moves, deadline, best_global):
     best = -float('inf')
     best_set = []
 
-    for _ in range(100):
+    for _ in range(9999):
         if deadline and time.time() > deadline:
             break
 

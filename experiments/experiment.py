@@ -111,9 +111,9 @@ def run_single(algo, depth, timeout, all_moves, ec, ec_fast):
     if algo == "NMCS":
         return nmcs([], level=2, depth=depth, best_moves=all_moves, ec=ec, timeout_sec=timeout)
     if algo == "LNMCS":
-        return lnmcs([], level=2, depth=depth, all_moves=all_moves, ec=ec, b=3, r=0.4, timeout_sec=timeout)
+        return lnmcs([], level=2, depth=depth, all_moves=all_moves, ec=ec, b=3, r=0.4, e=10, timeout_sec=timeout)
     if algo == "BILNMCS":
-        return bilnmcs([], level=2, depth=depth, all_moves=all_moves, ec_main=ec, ec_fast=ec_fast, b=3, r=0.4, timeout_sec=timeout)
+        return bilnmcs([], level=2, depth=depth, all_moves=all_moves, ec_main=ec, ec_fast=ec_fast, b=3, r=0.4,e=10, timeout_sec=timeout)
     if algo == "NRPA":
         return nrpa(level=2, policy={}, depth=depth, ec=ec, all_moves=all_moves, timeout_sec=timeout)
     if algo == "GNRPA":
@@ -127,7 +127,11 @@ def run_experiments(zip_path, extract_dir, depths, ensemble_sizes, timeouts, n_t
     all_moves = build_all_moves(first_network, make_sim_args(max(subsets.keys())))
     ec_map, ec_fast = make_evaluators(subsets)
 
-    algos = ["NMCS", "LNMCS", "BILNMCS", "NRPA", "GNRPA"]
+    # algos = ["NMCS", "LNMCS", "BILNMCS", "NRPA", "GNRPA"]
+    # algos = ["NMCS"]
+    # algos = ["BILNMCS"]
+    algos = ["NMCS", "LNMCS", "BILNMCS", "NRPA"]
+    # algos = ["NRPA"]
     total = len(algos) * len(depths) * len(ensemble_sizes) * len(timeouts) * n_trials
     pbar = tqdm(total=total, desc="Experiment Progress", unit="run")
 
